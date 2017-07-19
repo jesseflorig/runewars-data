@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "units.json#",
+  "title": "Schema for units data file",
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The upgrade's name as written on the card.",
+      "minLength": 1
+    },
+    "id": {
+      "type": "integer",
+      "description": "The upgrade's unique id number. It's not used in the game but it's used to link this upgrade to other data in this dataset.",
+      "minimum": 0
+    },
+    "image": {
+      "description": "The file path for this unit's image.",
+      "$ref": "definitions.json#/definitions/image_file_path"
+    },
+    "rws": {
+      "type": "string",
+      "description": "The upgrade's unique RWS id as described in the RWS format.",
+      "minLength": 1
+    },
+    "unique": {
+      "type": "boolean",
+      "description": "Some unit cards have unique names, which are identified by the bullet to the left of the name.\n A player cannot field two or more cards that share the same unique name, even if those cards are of different types."
+    },
+    "faction": {
+      "description": "The faction this unit belongs to.",
+      "$ref": "definitions.json#/definitions/faction"
+    },
+    "formations": {
+        "type": "array",
+        "description": "A list of formations",
+        "formation": {
+          "type": "object",
+          "description": "A formation",
+          "properties": {
+            "columns": {
+              "type": "integer",
+              "description": "The number of columns in the formation.",
+              "minimum": 1
+            },
+            "ranks": {
+              "type": "integer",
+              "description": "The number of rows in the formation.",
+              "minimum": 1
+            },
+            "points": {
+              "type": "integer",
+              "description": "",
+              "minimum": 1
+            },
+            "slots": {
+              "type": "array",
+              "description": "A list of the slots available to this formation.",
+              "uniqueItems": false,
+              "items": {
+                "description": "A slot available to this ship.",
+                "$ref": "definitions.json#/definitions/slot"
+              }
+            },
+          }
+        }
+    },
+  "required": [
+    "name",
+    "id",
+    "rws",
+    "formations"
+  ],
+  "additionalProperties": false
+}

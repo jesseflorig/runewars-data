@@ -1,7 +1,7 @@
 {
-  "name": "xwing-data",
-  "version": "0.34.0",
-  "description": "An easy-to-use collection of data and images from X-Wing: The Miniatures Game by Fantasy Flight Games.",
+  "name": "runewars-data",
+  "version": "0.1.0",
+  "description": "An easy-to-use collection of data and images from Runewars: The Miniatures Game by Fantasy Flight Games.",
   "scripts": {
     "release": "./node_modules/.bin/release-it",
     "patch": "npm run release -- patch",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/guidokessels/xwing-data"
+    "url": "https://github.com/jesseflorig/runewars-data"
   },
-  "author": "Guido Kessels <mail@guidokessels.com>",
+  "author": "Jesse Florig <contact@jesseflorig.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guidokessels/xwing-data/issues"
+    "url": "https://github.com/jesseflorig/runewars-data/issues"
   },
-  "homepage": "https://github.com/guidokessels/xwing-data",
+  "homepage": "https://github.com/jesseflorig/runewars-data",
   "devDependencies": {
     "release-it": "^2.3.1",
     "mocha": "^3.2.0",
