@@ -58,11 +58,79 @@
           initiative: 3
           type: "march",
           color: "blue",
-          speed: "2"
+          speed: 2
+        },
+        {
+          initiative: 4
+          type: "march",
+          color: "blue",
+          speed: 3
+        },
+        {
+          initiative: 2
+          type: "rotate",
+          color: "green",
+        },
+        {
+          initiative: 2
+          type: "special",
+          color: "green",
+        },
+        {
+          initiative: 2
+          type: "ranged",
+          color: "green",
+        },
+        {
+          initiative: 5
+          type: "shift",
+          color: "green",
+          speed: 1
+        },
+        {
+          initiative: 4
+          type: "melee",
+          color: "red"
         }
       ],
       modifiers: [
-
+        {
+          type: "bank",
+          color: "blue"
+        },
+        {
+          type: "turn",
+          color: "blue"
+          mod: -1
+        },
+        {
+          type: "charge",
+          color: "blue"
+        },
+        {
+          type: "turnCharge",
+          color: "blue"
+          mod: -1
+        },
+        {
+          type: "defend",
+          color: "green"
+          mod: 1
+        },
+        {
+          type: "surge",
+          color: "red"
+          mod: 1
+        },
+        {
+          type: "aim",
+          color: "red"
+          mod: 1
+        },
+        {
+          type: "rally",
+          color: "white"
+        }
       ]
     }
   }
