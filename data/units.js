@@ -3,6 +3,8 @@
     name: "Kari Wraithstalker",
     faction: "Daqan",
     unique: true,
+    defense: 3,
+    health: 4,
     type: "infantry",
     setupAbilities: [
       {
@@ -13,8 +15,7 @@
     activatedAbilities: [
       {
         type: "attack",
-        cost: "surge"
-        costCount: "+"
+        cost: "surge+"
         text: "Chose another enemey unit at range 1-5. That enemy suffers 2 damage per [SURGE] spent"
       }
     ],
