@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "definitions.json#",
+  "title": "Schema for common fields in data files",
+  "definitions": {
+    "faction": {
+      "type": "string",
+      "description": "A faction in the game.",
+      "enum": [
+        "Daqan Lords",
+        "Waiqar the Undying",
+        "Latari Elves",
+        "Uthuk Y'llan"
+      ]
+    },
+    "unitType": {
+      "type": "string",
+      "description": "A units size in the game.",
+      "enum": [
+        "Infantry",
+        "Cavalry",
+        "Seige"
+      ]
+    },
+    "stat": {
+      "type": "string",
+      "description": "A unit's stats.",
+      "enum": [
+        "Defense",
+        "Wounds"
+      ]
+    },
+    "upgrades": {
+      "type": "string",
+      "description": "An upgrade type in the game.",
+      "enum": [
+        "Artifact",
+        "Champion",
+        "Equipment",
+        "Heraldry",
+        "Music",
+        "Training",
+        "Unique"
+      ]
+    },
+    "action": {
+      "type": "string",
+      "description": "An action type in the game.",
+      "enum": [
+        "March",
+        "Shift",
+        "Reform",
+        "Melee Attack",
+        "Ranfed Attack",
+        "Rally",
+        "Skill"
+      ]
+    },
+    "actionModifiers": {
+      "type": "string",
+      "description": "An action modifier in the game.",
+      "enum": [
+        "Charge",
+        "Turn",
+        "Turning Charge",
+        "Defend",
+        "Enhance Attack",
+        "Bonus Action"
+      ]
+    },
+    "boonsBanes": {
+      "type": "string",
+      "description": "A boon or bane in type in the game",
+      "enum": [
+        "Inspiration",
+        "Blight",
+        "Immobilize",
+        "Panic",
+        "Stun"
+      ]
+    },
+    "diceResults": {
+      "type": "string",
+      "description": "A dice result in the game",
+      "enum": [
+        "Hit",
+        "Surge",
+        "Mortal Strike",
+        "Morale",
+        "Accuracy"
+      ]
+    },
+    "image_file_path": {
+      "type": "string",
+      "description": "A file path for an image in this package.",
+      "pattern": "^(?:units|upgrades)(?:\\/[a-zA-Z\\(\\)\\.0-9_-](?:[a-zA-Z\\(\\)\\.0-9\\ _-]*[a-zA-Z\\(\\)\\.0-9\\ _-])?)*\\.(?:png|jpg)$"
+    },
+    "range": {
+      "type": "string",
+      "description": "A range in expressed in range format",
+      "pattern": "^[1-5](-[1-5])?$"
+    }
+  }
+}

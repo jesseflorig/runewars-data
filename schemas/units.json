@@ -7,12 +7,12 @@
   "properties": {
     "name": {
       "type": "string",
-      "description": "The upgrade's name as written on the card.",
+      "description": "The unit's name as written on the card.",
       "minLength": 1
     },
     "id": {
       "type": "integer",
-      "description": "The upgrade's unique id number. It's not used in the game but it's used to link this upgrade to other data in this dataset.",
+      "description": "The unit's unique id number. It's not used in the game but it's used to link this upgrade to other data in this dataset.",
       "minimum": 0
     },
     "image": {
@@ -21,7 +21,7 @@
     },
     "rws": {
       "type": "string",
-      "description": "The upgrade's unique RWS id as described in the RWS format.",
+      "description": "The unit's unique RWS id as described in the RWS format.",
       "minLength": 1
     },
     "unique": {

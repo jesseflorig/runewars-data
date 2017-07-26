@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "units.json#",
+  "title": "Schema for units data file",
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The upgrade's name as written on the card.",
+      "minLength": 1
+    },
+    "id": {
+      "type": "integer",
+      "description": "The upgrade's unique id number. It's not used in the game but it's used to link this upgrade to other data in this dataset.",
+      "minimum": 0
+    },
+    "image": {
+      "description": "The file path for this upgrade's image.",
+      "$ref": "definitions.json#/definitions/image_file_path"
+    },
+    "rws": {
+      "type": "string",
+      "description": "The upgrade's unique RWS id as described in the RWS format.",
+      "minLength": 1
+    },
+    "unique": {
+      "type": "boolean",
+      "description": "Some unit cards have unique names, which are identified by the bullet to the left of the name.\n A player cannot field two or more cards that share the same unique name, even if those cards are of different types."
+    },
+    "faction": {
+      "description": "The faction this upgrade belongs to.",
+      "$ref": "definitions.json#/definitions/faction"
+    },
+  "required": [
+    "name",
+    "id",
+    "rws"
+  ],
+  "additionalProperties": false
+}
