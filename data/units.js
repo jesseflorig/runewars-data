@@ -20,31 +20,29 @@
       }
     ],
     passiveAbilities: [
-      {
-        type: "brutal",
-        amount: 1
-      },
-      {
-        type: "precise",
-        amount: 1
-      }
+      "brutal 1",
+      "precise 1"
     ]
     attacks: [
       {
         type: "range",
-        white: 1,
-        blue: 1
+        dice: [
+          "white",
+          "blue"
+        ]
       },
       {
         type: "melee",
-        white: 1,
-        blue: 1
+        dice: [
+          "white",
+          "blue"
+        ]
       }
     ],
     formations: [
       {
         trays: 1,
-        rows: 1,
+        columns: 1,
         ranks: 1,
         cost: 32,
         availableUpgrades: [
@@ -58,79 +56,79 @@
         {
           initiative: 3,
           type: "march",
-          color: "blue",
-          speed: 2
+          stance: "blue",
+          value: 2
         },
         {
           initiative: 4,
           type: "march",
-          color: "blue",
-          speed: 3
+          stance: "blue",
+          value: 3
         },
         {
           initiative: 2,
-          type: "rotate",
-          color: "green",
+          type: "reform",
+          stance: "green",
         },
         {
           initiative: 2,
-          type: "special",
-          color: "green",
+          type: "skill",
+          stance: "green",
         },
         {
           initiative: 2,
           type: "ranged",
-          color: "green",
+          stance: "green",
         },
         {
           initiative: 5,
           type: "shift",
-          color: "green",
-          speed: 1
+          stance: "green",
+          value: 1
         },
         {
           initiative: 4,
           type: "melee",
-          color: "red"
+          stance: "red"
         }
       ],
       modifiers: [
         {
-          type: "bank",
-          color: "blue"
+          type: "turn",
+          stance: "blue"
         },
         {
-          type: "turn",
-          color: "blue"
-          mod: -1
+          type: "wheel",
+          stance: "blue"
+          value: -1
         },
         {
           type: "charge",
-          color: "blue"
+          stance: "blue"
         },
         {
-          type: "turnCharge",
-          color: "blue"
-          mod: -1
+          type: "turningCharge",
+          stance: "blue"
+          value: -1
         },
         {
           type: "defend",
-          color: "green"
-          mod: 1
+          stance: "green"
+          value: 1
         },
         {
           type: "surge",
-          color: "red"
-          mod: 1
+          stance: "red"
+          value: 1
         },
         {
-          type: "aim",
-          color: "red"
-          mod: 1
+          type: "accuracy",
+          stance: "red"
+          value: 1
         },
         {
           type: "rally",
-          color: "white"
+          stance: "white"
         }
       ]
     }
@@ -155,27 +153,26 @@
         text: "After you perform a [MELEE] you may perform a [MELEE] against another enemy that has not been targeted by your [MELEE] durnig this activation."
       },
       {
-        type: "special",
+        type: "skill",
         text: "Each other ally at range 1-3 receives 1 inspiration token"
       }
     ],
     passiveAbilities: [
-      {
-        type: "brutal",
-        amount: 1
-      }
+      "brutal 1"
     ]
     attacks: [
       {
         type: "melee",
-        white: 1,
-        red: 1
+        dice: [
+          "white",
+          "red"
+        ]
       }
     ],
     formations: [
       {
         trays: 1,
-        rows: 1,
+        columns: 1,
         ranks: 1,
         cost: 34,
         availableUpgrades: [
@@ -189,78 +186,140 @@
         {
           initiative: 3,
           type: "march",
-          color: "blue",
-          speed: 2
+          stance: "blue",
+          value: 2
         },
         {
           initiative: 4,
           type: "march",
-          color: "blue",
-          speed: 3
+          stance: "blue",
+          value: 3
         },
         {
           initiative: 6,
           type: "march",
-          color: "blue",
-          speed: 4
+          stance: "blue",
+          value: 4
         },
         {
           initiative: 2,
-          type: "rotate",
-          color: "green",
+          type: "reform",
+          stance: "green",
         },
         {
           initiative: 5,
           type: "shift",
-          color: "green",
-          speed: 1
+          stance: "green",
+          value: 1
         },
         {
           initiative: 6,
           type: "melee",
-          color: "red"
+          stance: "red"
         },
         {
           initiative: 2,
-          type: "special",
-          color: "yellow"
+          type: "skill",
+          stance: "yellow"
         },
         {
           initiative: 2,
           type: "melee",
-          color: "yellow"
+          stance: "yellow"
         }
       ],
       modifiers: [
         {
-          type: "bank",
-          color: "blue",
-          mod: -1
+          type: "turn",
+          stance: "blue",
+          value: -1
         },
         {
           type: "charge",
-          color: "blue"
+          stance: "blue"
         },
         {
-          type: "turnCharge",
-          color: "blue"
-          mod: -1
+          type: "turningCharge",
+          stance: "blue"
+          value: -1
         },
         {
           type: "hit",
-          color: "red"
-          mod: 1
+          stance: "red"
+          value: 1
         },
         {
           type: "rally",
-          color: "white"
+          stance: "white"
         },
         {
           type: "defense",
-          color: "white",
-          mod: 1
+          stance: "white",
+          value: 1
         }
       ]
     }
   }
 ]
+
+// New Character
+// {
+//   name: "",
+//   faction: "",
+//   unique: ,
+//   defense: ,
+//   health: ,
+//   type: "",
+//   setupAbilities: [
+//     {
+//       name: "",
+//       text: ""
+//     }
+//   ]
+//   activatedAbilities: [
+//     {
+//       type: "",
+//       cost: "",
+//       text: ""
+//     }
+//   ],
+//   passiveAbilities: [
+//     ""
+//   ]
+//   attacks: [
+//     {
+//       type: "",
+//       dice: [
+//         ""
+//       ]
+//     }
+//   ],
+//   formations: [
+//     {
+//       trays: ,
+//       columns: ,
+//       ranks: ,
+//       cost: ,
+//       availableUpgrades: [
+//         ""
+//       ]
+//     }
+//   ]
+//   commandWheel: {
+//     actions: [
+//       {
+//         initiative: ,
+//         type: "",
+//         stance: "",
+//         value:
+//       }
+//     ],
+//     modifiers: [
+//       {
+//         type: "",
+//         stance: "",
+//         value:
+//       }
+//     ]
+//   }
+// }

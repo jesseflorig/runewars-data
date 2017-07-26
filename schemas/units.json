@@ -33,8 +33,9 @@
       "$ref": "definitions.json#/definitions/faction"
     },
     "formations": {
-        "type": "array",
-        "description": "A list of formations",
+      "type": "array",
+      "description": "A list of formations",
+      "properties": {
         "formation": {
           "type": "object",
           "description": "A formation",
@@ -62,10 +63,26 @@
                 "description": "A slot available to this ship.",
                 "$ref": "definitions.json#/definitions/slot"
               }
-            },
+            }
           }
         }
+      }
     },
+    "commandWheel": {
+      "type": "object",
+      "description": "The command wheel actions and modifiers",
+      "properties": {
+        "actions": {
+          "type" : "array",
+          "description": "A list of actions"
+        },
+        "modifiers": {
+          "type" : "array",
+          "description": "A list of action modifiers"
+        }
+      }
+    }
+  },
   "required": [
     "name",
     "id",
